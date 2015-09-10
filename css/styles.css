@@ -1,3 +1,10 @@
 #result {
   display: none;
+  font-size: 35;
+  color:purple;
+}
+
+.jumbotron {
+  font-size: 15px;
+  background-color:white;
 }
