@@ -74,3 +74,15 @@ var romanNumeral = function(number) {
   }
   return array.join('');
 };
+
+$(document).ready(function() {
+  $('form#roman_Numerical').submit(function(event) {
+    var number = parseInt($('input#number').val());
+    var result = romanNumeral(number);
+
+    $(".result").text(result);
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
