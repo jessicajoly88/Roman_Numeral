@@ -12,29 +12,65 @@ var romanNumeral = function(number) {
     array.push("M");
     number -= 1000;
   }
+
   while (number >= 500) {
-    array.push("D");
-    number -= 500;
+    if (number >= 900) {
+      array.push("CM");
+      number -= 900;
+    } else {
+      array.push("D");
+      number -= 500;
+    }
   }
+
   while (number >= 100) {
-    array.push("C");
-    number -= 100;
+    if (number >=400) {
+      array.push("CD");
+      number -= 400;
+    } else {
+      array.push("C");
+      number -= 100;
+    }
   }
+
   while (number >= 50) {
-    array.push("L");
-    number -= 50;
+    if (number >= 90) {
+      array.push("XC");
+      number -= 90;
+    } else {
+      array.push("L");
+      number -= 50;
+    }
   }
+
   while (number >= 10) {
-    array.push("X");
-    number -= 10;
+    if (number >= 40) {
+      array.push("XL");
+      number -= 40;
+    } else {
+      array.push("X");
+      number -= 10;
+    }
   }
+
   while (number >= 5) {
-    array.push("V");
-    number -= 5;
+    if (number >= 9) {
+      array.push("IX");
+      number -= 9;
+    } else {
+      array.push("V");
+      number -= 5;
+    }
   }
+
   while (number >= 1) {
-    array.push("I");
-    number -= 1;
+    if (number >= 4) {
+      array.push("IV");
+      number -= 4;
+    } else {
+      array.push("I");
+      number -= 1;
+    }
   }
   return array.join('');
 };
